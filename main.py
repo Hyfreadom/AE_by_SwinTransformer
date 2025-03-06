@@ -48,10 +48,10 @@ def main():
     image_size = 32 * 32
     compression_ratio = model.bottleneck_dim / image_size
     
-    print(f"模型总参数量: {total_params}")
-    print(f"原始图像大小: {image_size}")
-    print(f"瓶颈维度: {model.bottleneck_dim}")
-    print(f"压缩率: {compression_ratio:.4f} ({compression_ratio*100:.2f}%)")
+    print(f"模型总参数量: {total_params}")           # 810884
+    print(f"原始图像大小: {image_size}")             # 1024
+    print(f"瓶颈维度: {model.bottleneck_dim}")      # 64
+    print(f"压缩率: {compression_ratio:.4f} ({compression_ratio*100:.2f}%)")    # 6.25%
     
     # 检查尺寸一致性 - 输入一个样本批次经过模型
     with torch.no_grad():
